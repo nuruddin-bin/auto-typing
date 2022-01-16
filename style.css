@@ -41,8 +41,37 @@ body{
     animation: slide 12s steps(4) infinite;
 }
 
+/* animation for li */
 @keyframes slide{
     100%{
         top: -22.5rem;
+    }
+}
+
+/* options texts */
+.option li span{
+    position: relative;
+    margin: 5px 0;
+    line-height: 5.625rem;
+}
+
+.option li span::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: lightblue;
+    border-left: 2px solid blue;
+    animation: typing 3s steps(10) infinite;
+}
+
+/* animation for slid box */
+@keyframes typing{
+    40%, 60%{
+        left: calc(100% + 1.875rem);
+    }
+    100%{
+        left: 0;
     }
 }
